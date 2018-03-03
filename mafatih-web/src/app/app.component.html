@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main-container">
+  <mat-toolbar class="fixed-header" color="primary">
+      <mat-form-field class="toolbar-search-input">
+        <input #searchQueryInput matInput placeholder="Search">
+      </mat-form-field>
+      <span class="fill-remaining-space"></span>
+      <button mat-button>مستندات</button>
+      <button mat-button routerLink="/mafatih" routerLinkActive="active">مفاتیح</button>
+      <button mat-button routerLink="/" routerLinkActive="active">صفحه اصلی</button>
+  </mat-toolbar>
+  <mat-sidenav-container class="main-sidenav-container">
+    <mat-sidenav mode="side" opened class="context-list">
+      <ul>
+          <li *ngFor="let chapter of chapters">
+            <h3>{{chapter.title}}</h3>
+            <ul>
+              <li *ngFor="let section of chapter.sections">
+                  <h3>{{ section.title }}</h3>
+                  <ul>
+                    <li *ngFor="let article of section.articles" (click)="onSelect(chapter, section, article)">
+                      <h3>{{ article.title }}</h3>
+                    </li>
+                  </ul>
+              </li>
+            </ul>
+          </li>
+      </ul>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="article-content">
+            <p *ngFor="let item of currentArticle.items">
+              <span *ngIf="item.type=='Text'" class="article-item-text">{{ item.content }}</span>
+              <span *ngIf="item.type=='Translate'" class="article-item-translate">{{ item.content }}</span>
+              <span *ngIf="item.type=='AboutText'" class="article-item-about">{{ item.content }}</span>
+            </p>
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

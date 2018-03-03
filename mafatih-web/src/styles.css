@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import '~@angular/material/prebuilt-themes/purple-green.css';*/
+@font-face {
+    font-family: vazir;
+    src: url('/assets/Vazir.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: vazir;
+    src: url('/assets/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: nabi;
+    src: url('/assets/Nabi.ttf') format('truetype');
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: vazir;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.fixed-toolbar {
+    position: fixed;
+    top: 0;
+}
+
+.toolbar-brand {
+    font-family: vazir;
+}
+
+.main-container {
+    height: 100%;
+}
+
+.context-list {
+    min-width: 300px;
+    max-width: 300px;
+    direction: rtl;
+}
+
+.article-content {
+    margin: 50px;
+    direction: rtl;
+}
+
+.article-item-text {
+    color: black;
+    font-family: nabi;
+}
+
+.article-item-about {
+    color: blue;
+    font-family: vazir;
+}
+
+.article-item-translate {
+    color: crimson;
+    font-family: vazir;
+}

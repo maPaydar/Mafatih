@@ -1,0 +1,16 @@
+.header {
+    background: rgba(152, 237, 252, 0.5);
+    text-align: center;
+    direction: rtl;
+    margin-top: 60px;
+}
+
+.header-title {
+    font-family: nabi;
+    font-size: 120px;
+    color: rgb(71, 170, 41);
+}
+
+.header-text {
+    font-family: nabi;
+}
